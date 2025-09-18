@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.bohpts'
 version = '1.0.0'
-description = 'bohpts-messaging'
+description = 'bohpts-rabbitmq'
 
 java {
     toolchain {
