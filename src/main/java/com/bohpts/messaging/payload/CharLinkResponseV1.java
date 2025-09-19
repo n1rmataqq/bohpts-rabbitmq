@@ -6,12 +6,12 @@ import lombok.Builder;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharLinkResponseV1(
+        Long requestId,
         Boolean success,
-        Long linkRequestId,
+        String message,
         Long tgUserId,
         Long charId,
         String charName,
-        String confirmationCode,
-        String message
+        String confirmationCode
 ) {
 }

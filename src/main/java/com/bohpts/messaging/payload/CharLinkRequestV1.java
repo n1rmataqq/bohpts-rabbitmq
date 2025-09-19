@@ -6,7 +6,7 @@ import lombok.Builder;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharLinkRequestV1(
-        Long linkRequestId,
+        Long requestId,
         Long tgUserId,
         String tgUserFirstName,
         String account,
