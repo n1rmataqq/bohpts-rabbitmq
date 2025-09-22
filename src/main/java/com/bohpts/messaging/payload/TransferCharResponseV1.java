@@ -5,7 +5,7 @@ import lombok.Builder;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record SimpleResponseV1(
+public record TransferCharResponseV1(
         Long requestId,
         Boolean success,
         String message
