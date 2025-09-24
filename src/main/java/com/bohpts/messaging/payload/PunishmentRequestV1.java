@@ -6,11 +6,12 @@ import lombok.Builder;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record PunishmentRequestV1(
+        Long requestId,
         String sort,
         String name,
         String affect,
         String type,
-        Long expirationDate,
+        Long expirationTime,
         String reason,
         String punishedBy
 ) {
