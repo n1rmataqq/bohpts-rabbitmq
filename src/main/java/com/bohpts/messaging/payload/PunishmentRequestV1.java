@@ -10,7 +10,8 @@ public record PunishmentRequestV1(
         String name,
         String affect,
         String type,
-        String expirationDate,
-        String reason
+        Long expirationDate,
+        String reason,
+        String punishedBy
 ) {
 }
