@@ -11,6 +11,6 @@ public record TransferItemRequestV1(
         Long charIdTo,
         Long itemId,
         Long itemObjectId,
-        Integer count
+        Long count
 ) {
 }
