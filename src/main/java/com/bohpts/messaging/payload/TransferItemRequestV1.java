@@ -9,7 +9,6 @@ public record TransferItemRequestV1(
         Long requestId,
         Long charIdFrom,
         Long charIdTo,
-        Long itemId,
         Long itemObjectId,
         Long count
 ) {
