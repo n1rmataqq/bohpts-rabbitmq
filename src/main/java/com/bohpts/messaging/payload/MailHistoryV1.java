@@ -17,6 +17,8 @@ public record MailHistoryV1(
         Long reqAdena,
         List<Item> attachments
 ) {
+    @Builder
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public record Item(
             Long itemId,
             Long itemObjectId,
