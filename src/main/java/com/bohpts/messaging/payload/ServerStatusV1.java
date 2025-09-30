@@ -9,7 +9,7 @@ public record ServerStatusV1(
         Boolean gmMod,
         Status status
 ) {
-    private enum Status {
+    public enum Status {
         UP,
         DOWN
     }
