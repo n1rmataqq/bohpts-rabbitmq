@@ -6,7 +6,7 @@ import lombok.Builder;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record ServerStatusV1(
-        Boolean gmMod,
+        Boolean gmMode,
         Status status
 ) {
     public enum Status {
