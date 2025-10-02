@@ -1,13 +1,14 @@
-package com.bohpts.messaging.payload;
+package com.bohpts.messaging.payload.item;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record TransferItemResponseV1(
+public record AddItemRequestV1(
         Long requestId,
-        Boolean success,
-        String message
+        Long charIdTo,
+        Long itemId,
+        Long count
 ) {
 }
