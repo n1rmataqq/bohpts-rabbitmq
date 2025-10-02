@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class AddItemResponseV2 extends ResponseV2<ItemRequestStatus> {
 
     public AddItemResponseV2(Long requestId, ItemRequestStatus status) {
-        new AddItemResponseV2(requestId, status, null);
+        this(requestId, status, null);
     }
 
     public AddItemResponseV2(Long requestId, ItemRequestStatus status, String message) {

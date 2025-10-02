@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class DeleteItemResponseV2 extends ResponseV2<ItemRequestStatus> {
 
     public DeleteItemResponseV2(Long requestId, ItemRequestStatus status) {
-        new DeleteItemResponseV2(requestId, status, null);
+        this(requestId, status, null);
     }
 
     public DeleteItemResponseV2(Long requestId, ItemRequestStatus status, String message) {
