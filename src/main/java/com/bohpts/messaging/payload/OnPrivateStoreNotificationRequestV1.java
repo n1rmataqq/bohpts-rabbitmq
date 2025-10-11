@@ -13,7 +13,8 @@ public record OnPrivateStoreNotificationRequestV1(
         String clientCharName,
         PrivateStoreType storeType,
         List<Item> items,
-        Long tradeAmount
+        Long tradeAmount,
+        Long traderAdena
 ) {
     public enum PrivateStoreType {
         BUY,

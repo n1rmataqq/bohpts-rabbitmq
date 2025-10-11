@@ -10,19 +10,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper = true)
-public class PayAdenaResponseV2 extends ResponseV2<ItemRequestStatus> {
+public class PayColResponseV2 extends ResponseV2<ItemRequestStatus> {
 
     private String handler;
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status) {
+    public PayColResponseV2(Long requestId, ItemRequestStatus status) {
         this(requestId, status, null);
     }
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status, String handler) {
+    public PayColResponseV2(Long requestId, ItemRequestStatus status, String handler) {
         this(requestId, status, null, handler);
     }
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status, String message, String handler) {
+    public PayColResponseV2(Long requestId, ItemRequestStatus status, String message, String handler) {
         super();
         this.requestId = requestId;
         this.success = status == ItemRequestStatus.SUCCESS;

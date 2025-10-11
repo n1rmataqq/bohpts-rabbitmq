@@ -5,7 +5,7 @@ import lombok.Builder;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record PayAdenaRequestV1(
+public record PayColRequestV1(
         Long requestId,
         String handler,
         Long charId,
