@@ -1,4 +1,4 @@
-package com.bohpts.messaging.payload;
+package com.bohpts.messaging.payload.stat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
