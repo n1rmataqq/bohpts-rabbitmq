@@ -8,6 +8,7 @@ import java.util.List;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record SendMailRequestV1(
+        Long requestId,
         Long charId,
         String author,
         String title,
