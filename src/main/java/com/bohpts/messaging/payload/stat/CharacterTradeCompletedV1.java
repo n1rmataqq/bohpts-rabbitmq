@@ -7,16 +7,18 @@ import java.util.List;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record ClanStatV1(
-        List<ClanStat> clanStats
+public record CharacterTradeCompletedV1(
+        Long fromCharId,
+        Long toCharId,
+        List<Item> items
 ) {
-
     @Builder
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public record ClanStat(
-            Long clanId,
-            Integer members,
-            Integer onlineMembers
+    public record Item(
+            Long itemId,
+            Long itemObjectId,
+            Integer enchantLevel,
+            Long count
     ) {
     }
 }

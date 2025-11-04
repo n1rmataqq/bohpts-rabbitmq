@@ -7,10 +7,10 @@ import java.util.List;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record MailHistoryV1(
-        Long messageId,
-        Long senderCharId,
-        Long receiverCharId,
+public record CharacterMailSentV1(
+        Long mailId,
+        Long fromCharId,
+        Long toCharId,
         String subject,
         String content,
         Long expiration,
