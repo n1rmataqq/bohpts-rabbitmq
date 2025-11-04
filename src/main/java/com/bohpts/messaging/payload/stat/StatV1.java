@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public abstract class StatV1<T> {
+public class StatV1<T> {
     protected StatType type;
     protected long timestampMs;
     protected T data;
