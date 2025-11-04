@@ -8,9 +8,10 @@ import java.util.List;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharactersExchangeCompletedV1(
-        Long fromCharId,
-        Long toCharId,
-        List<Item> items
+        Long initiatorCharId,
+        Long partnerCharId,
+        List<Item> initiatorItems,
+        List<Item> partnerItems
 ) {
     @Builder
     @JsonIgnoreProperties(ignoreUnknown = true)
