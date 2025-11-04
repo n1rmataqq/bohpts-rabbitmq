@@ -7,7 +7,7 @@ import java.util.List;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CharacterTradeCompletedV1(
+public record CharactersExchangeCompletedV1(
         Long fromCharId,
         Long toCharId,
         List<Item> items
