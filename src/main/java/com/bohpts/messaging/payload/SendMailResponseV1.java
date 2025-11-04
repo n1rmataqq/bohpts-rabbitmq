@@ -13,17 +13,17 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper = true)
 public class SendMailResponseV1 extends ResponseV2<CommonStatus> {
 
-    private final Set<Integer> createdMessageIds;
+    private final Set<Integer> createdMailIds;
 
-    public SendMailResponseV1(Long requestId, CommonStatus status, Set<Integer> createdMessageIds) {
-        this(requestId, status, createdMessageIds, null);
+    public SendMailResponseV1(Long requestId, CommonStatus status, Set<Integer> createdMailIds) {
+        this(requestId, status, createdMailIds, null);
     }
 
-    public SendMailResponseV1(Long requestId, CommonStatus status, Set<Integer> createdMessageIds, String message) {
+    public SendMailResponseV1(Long requestId, CommonStatus status, Set<Integer> createdMailIds, String message) {
         super();
         this.requestId = requestId;
         this.success = status == CommonStatus.SUCCESS;
-        this.createdMessageIds = createdMessageIds;
+        this.createdMailIds = createdMailIds;
         this.status = status;
         this.message = message;
     }
