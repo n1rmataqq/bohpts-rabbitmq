@@ -2,7 +2,9 @@ package com.bohpts.messaging.payload;
 
 import com.bohpts.messaging.CommonStatus;
 import com.bohpts.messaging.ResponseV2;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -19,7 +21,13 @@ public class SendMailResponseV1 extends ResponseV2<CommonStatus> {
         this(requestId, status, createdMailIds, null);
     }
 
-    public SendMailResponseV1(Long requestId, CommonStatus status, Set<Integer> createdMailIds, String message) {
+    @JsonCreator
+    public SendMailResponseV1(
+            @JsonProperty("requestId") Long requestId,
+            @JsonProperty("status") CommonStatus status,
+            @JsonProperty("createdMailIds") Set<Integer> createdMailIds,
+            @JsonProperty("message") String message
+    ) {
         super();
         this.requestId = requestId;
         this.success = status == CommonStatus.SUCCESS;
