@@ -1,5 +1,6 @@
 package com.bohpts.messaging.payload.stat;
 
+import com.bohpts.messaging.payload.common.Item;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
@@ -17,13 +18,4 @@ public record CharacterMailSentV1(
         Long reqAdena,
         List<Item> attachments
 ) {
-    @Builder
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public record Item(
-            Long itemId,
-            Long itemObjectId,
-            Integer enchantLevel,
-            Long count
-    ) {
-    }
 }
