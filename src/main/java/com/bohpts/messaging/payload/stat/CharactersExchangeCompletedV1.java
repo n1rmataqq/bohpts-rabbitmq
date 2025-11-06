@@ -1,5 +1,6 @@
 package com.bohpts.messaging.payload.stat;
 
+import com.bohpts.messaging.payload.common.Item;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
@@ -13,13 +14,4 @@ public record CharactersExchangeCompletedV1(
         List<Item> initiatorItems,
         List<Item> partnerItems
 ) {
-    @Builder
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public record Item(
-            Long itemId,
-            Long itemObjectId,
-            Integer enchantLevel,
-            Long count
-    ) {
-    }
 }

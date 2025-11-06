@@ -2,7 +2,8 @@ package com.bohpts.messaging.payload.stat;
 
 import com.bohpts.messaging.payload.common.Item;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Builder;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
@@ -16,6 +17,15 @@ public record CharacterMailSentV1(
         String content,
         Long expiration,
         Long reqAdena,
-        List<Item> attachments
+        List<ItemAttachment> attachments
 ) {
+
+    @Data
+    @SuperBuilder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @EqualsAndHashCode(callSuper = true)
+    public final static class ItemAttachment extends Item {
+        Long newItemObjectId;
+    }
 }
