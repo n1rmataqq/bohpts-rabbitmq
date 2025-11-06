@@ -4,11 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
 import java.util.List;
+import java.util.UUID;
 
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharacterMailSentV1(
-        Long mailId,
+        UUID mailUUID,
         Long fromCharId,
         Long toCharId,
         String customAuthor,

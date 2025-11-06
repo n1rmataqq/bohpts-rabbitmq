@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.bohpts'
-version = '1.5.7'
+version = '1.6.2'
 description = 'bohpts-rabbitmq'
 
 java {
