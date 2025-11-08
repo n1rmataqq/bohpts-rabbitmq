@@ -1,5 +1,6 @@
 package com.bohpts.messaging.payload;
 
+import com.bohpts.messaging.payload.common.PrivateStoreType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
@@ -16,12 +17,6 @@ public record OnPrivateStoreNotificationRequestV1(
         Long tradeAmount,
         Long traderAdena
 ) {
-    public enum PrivateStoreType {
-        BUY,
-        SELL,
-        PACKAGE_SELL
-    }
-
     public record Item(
             Long itemId,
             String itemNameRu,
