@@ -7,7 +7,7 @@ import lombok.Builder;
 import java.util.UUID;
 
 @Builder
-@MessageAlias("CharacterLoggedIn")
+@MessageAlias("CharacterLoggedInV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharacterLoggedInV1(
         Long timestampMs,
