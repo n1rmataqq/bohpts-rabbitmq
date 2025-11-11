@@ -1,5 +1,6 @@
 package com.bohpts.messaging.dto;
 
+import com.bohpts.messaging.MessageAlias;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,6 +10,7 @@ import lombok.EqualsAndHashCode;
 import java.util.Set;
 
 @Data
+@MessageAlias("SendMailResponseV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper = true)
 public class SendMailResponseV1 extends ResponseV2<CommonStatus> {

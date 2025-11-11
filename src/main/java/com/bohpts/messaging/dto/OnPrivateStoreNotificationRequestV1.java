@@ -1,5 +1,6 @@
 package com.bohpts.messaging.dto;
 
+import com.bohpts.messaging.MessageAlias;
 import com.bohpts.messaging.dto.common.PrivateStoreType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
@@ -7,6 +8,7 @@ import lombok.Builder;
 import java.util.List;
 
 @Builder
+@MessageAlias("OnPrivateStoreNotificationRequestV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record OnPrivateStoreNotificationRequestV1(
         Long traderCharId,

@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.bohpts'
-version = '1.7.3'
+version = '1.8.0'
 description = 'bohpts-rabbitmq'
 
 java {
@@ -27,6 +27,8 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
+    implementation 'io.github.classgraph:classgraph:4.8.184'
+
     compileOnly 'com.fasterxml.jackson.core:jackson-annotations:2.20'
     compileOnly 'org.projectlombok:lombok:1.18.40'
     annotationProcessor 'org.projectlombok:lombok:1.18.40'

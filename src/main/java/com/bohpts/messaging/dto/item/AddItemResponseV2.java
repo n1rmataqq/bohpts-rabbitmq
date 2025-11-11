@@ -1,5 +1,6 @@
 package com.bohpts.messaging.dto.item;
 
+import com.bohpts.messaging.MessageAlias;
 import com.bohpts.messaging.dto.ResponseV2;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@MessageAlias("AddItemResponseV2")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper = true)
 public class AddItemResponseV2 extends ResponseV2<ItemRequestStatus> {
