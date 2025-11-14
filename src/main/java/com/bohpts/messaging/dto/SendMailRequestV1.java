@@ -1,7 +1,7 @@
 package com.bohpts.messaging.dto;
 
 import com.bohpts.messaging.MessageAlias;
-import com.bohpts.messaging.Responsable;
+import com.bohpts.messaging.Repliable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
@@ -16,7 +16,7 @@ public record SendMailRequestV1(
         String title,
         String body,
         List<Item> items
-) implements Responsable<SendMailResponseV1> {
+) implements Repliable<SendMailResponseV1> {
 
     public record Item(
             Long itemId,
@@ -25,7 +25,7 @@ public record SendMailRequestV1(
     }
 
     @Override
-    public Class<SendMailResponseV1> responseType() {
+    public Class<SendMailResponseV1> replyType() {
         return SendMailResponseV1.class;
     }
 }
