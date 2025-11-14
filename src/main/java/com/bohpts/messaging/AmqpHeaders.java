@@ -1,7 +1,7 @@
 package com.bohpts.messaging;
 
-public final class TypeHeaders {
-    private TypeHeaders() {
+public final class AmqpHeaders {
+    private AmqpHeaders() {
     }
 
     public static final String TYPE_ID = "__TypeId__";
