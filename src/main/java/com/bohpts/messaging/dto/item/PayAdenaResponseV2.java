@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @MessageAlias("PayAdenaResponseV2")
@@ -16,17 +18,17 @@ public class PayAdenaResponseV2 extends ResponseV2<ItemRequestStatus> {
 
     private String handler;
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status) {
-        this(requestId, status, null);
+    public PayAdenaResponseV2(UUID correlationId, ItemRequestStatus status) {
+        this(correlationId, status, null);
     }
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status, String handler) {
-        this(requestId, status, null, handler);
+    public PayAdenaResponseV2(UUID correlationId, ItemRequestStatus status, String handler) {
+        this(correlationId, status, null, handler);
     }
 
-    public PayAdenaResponseV2(Long requestId, ItemRequestStatus status, String message, String handler) {
+    public PayAdenaResponseV2(UUID correlationId, ItemRequestStatus status, String message, String handler) {
         super();
-        this.requestId = requestId;
+        this.correlationId = correlationId;
         this.success = status == ItemRequestStatus.SUCCESS;
         this.status = status;
         this.message = message;

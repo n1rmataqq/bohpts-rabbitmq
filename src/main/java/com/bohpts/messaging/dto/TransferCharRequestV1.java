@@ -9,7 +9,6 @@ import lombok.Builder;
 @MessageAlias("TransferCharRequestV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record TransferCharRequestV1(
-        Long requestId,
         Long charId,
         String accountFrom,
         String accountTo

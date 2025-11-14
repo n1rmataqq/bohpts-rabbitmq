@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @MessageAlias("DeleteItemResponseV2")
@@ -14,13 +16,13 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 public class DeleteItemResponseV2 extends ResponseV2<ItemRequestStatus> {
 
-    public DeleteItemResponseV2(Long requestId, ItemRequestStatus status) {
-        this(requestId, status, null);
+    public DeleteItemResponseV2(UUID correlationId, ItemRequestStatus status) {
+        this(correlationId, status, null);
     }
 
-    public DeleteItemResponseV2(Long requestId, ItemRequestStatus status, String message) {
+    public DeleteItemResponseV2(UUID correlationId, ItemRequestStatus status, String message) {
         super();
-        this.requestId = requestId;
+        this.correlationId = correlationId;
         this.success = status == ItemRequestStatus.SUCCESS;
         this.status = status;
         this.message = message;
