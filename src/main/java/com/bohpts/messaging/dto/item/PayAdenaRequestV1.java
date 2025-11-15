@@ -16,6 +16,6 @@ public record PayAdenaRequestV1(
 
     @Override
     public Class<PayAdenaResponseV2> replyType() {
-        return null;
+        return PayAdenaResponseV2.class;
     }
 }
