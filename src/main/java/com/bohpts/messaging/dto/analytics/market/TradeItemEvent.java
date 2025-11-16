@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat.mail;
+package com.bohpts.messaging.dto.analytics.market;
 
 import com.bohpts.messaging.dto.common.Item;
 import lombok.AllArgsConstructor;
@@ -12,6 +12,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public final class MailItemAttachment extends Item {
+public final class TradeItemEvent extends Item {
+    Long price;
     Long newItemObjectId;
 }

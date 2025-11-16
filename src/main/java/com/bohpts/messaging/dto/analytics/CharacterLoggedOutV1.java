@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat;
+package com.bohpts.messaging.dto.analytics;
 
 import com.bohpts.messaging.MessageAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -7,9 +7,9 @@ import lombok.Builder;
 import java.util.UUID;
 
 @Builder
-@MessageAlias("CharacterLoggedInV1")
+@MessageAlias("CharacterLoggedOutV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CharacterLoggedInV1(
+public record CharacterLoggedOutV1(
         Long timestampMs,
         UUID sessionId,
         String account,

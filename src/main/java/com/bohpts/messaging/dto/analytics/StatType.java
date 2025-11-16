@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat;
+package com.bohpts.messaging.dto.analytics;
 
 public enum StatType {
     CHARACTER_LOGGED_IN,

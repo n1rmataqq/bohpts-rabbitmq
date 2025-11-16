@@ -1,17 +1,19 @@
-package com.bohpts.messaging.dto.stat.mail;
+package com.bohpts.messaging.dto.analytics.mail;
 
 import com.bohpts.messaging.MessageAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Builder;
 
+import java.util.List;
 import java.util.UUID;
 
 @Builder
-@MessageAlias("CharacterMailReturnedV1")
+@MessageAlias("CharacterMailCancelledV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CharacterMailReturnedV1(
+public record CharacterMailCancelledV1(
         Long timestampMs,
         UUID mailUUID,
-        Long byCharId
+        Long byCharId,
+        List<MailItemAttachment> attachments
 ) {
 }

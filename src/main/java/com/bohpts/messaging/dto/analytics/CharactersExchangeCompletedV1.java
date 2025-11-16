@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat;
+package com.bohpts.messaging.dto.analytics;
 
 import com.bohpts.messaging.MessageAlias;
 import com.bohpts.messaging.dto.common.Item;

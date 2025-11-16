@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat.market;
+package com.bohpts.messaging.dto.analytics.market;
 
 import com.bohpts.messaging.MessageAlias;
 import com.bohpts.messaging.dto.common.PrivateStoreType;

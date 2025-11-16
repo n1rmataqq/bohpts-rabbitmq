@@ -1,4 +1,4 @@
-package com.bohpts.messaging.dto.stat.mail;
+package com.bohpts.messaging.dto.analytics.mail;
 
 import com.bohpts.messaging.MessageAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -8,18 +8,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Builder
-@MessageAlias("CharacterMailSentV1")
+@MessageAlias("CharacterMailAcceptedV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CharacterMailSentV1(
+public record CharacterMailAcceptedV1(
         Long timestampMs,
         UUID mailUUID,
-        Long fromCharId,
-        Long toCharId,
-        String customAuthor,
-        String subject,
-        String content,
-        Long expiration,
-        Long reqAdena,
+        Long byCharId,
         List<MailItemAttachment> attachments
 ) {
 }
