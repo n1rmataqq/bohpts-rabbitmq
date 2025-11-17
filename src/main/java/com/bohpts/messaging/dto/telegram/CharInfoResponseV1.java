@@ -7,7 +7,7 @@ import lombok.Builder;
 import java.util.UUID;
 
 @Builder
-@MessageAlias("CharInfoV1")
+@MessageAlias("CharInfoResponseV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record CharInfoResponseV1(
         UUID correlationId,
