@@ -14,7 +14,7 @@ import java.util.UUID;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-@MessageAlias("ServerStatusV1")
+@MessageAlias("EpicBossEventV1")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(callSuper = true)
 public class EpicBossEventV1 extends ServerEventV1 {
