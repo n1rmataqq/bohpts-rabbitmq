@@ -12,12 +12,6 @@ public record VoteAttemptRequestV1(
         Long charId,
         String charName,
         String ip,
-        VoteProvider provider
+        String provider
 ) {
-    public enum VoteProvider {
-        HOPZONE,
-        TOPZONE,
-        L2JBRASIL,
-        MMOTOP
-    }
 }
