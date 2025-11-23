@@ -12,9 +12,12 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record SendMailRequestV1(
         Long charId,
-        String author,
-        String title,
-        String body,
+        String authorEn,
+        String authorRu,
+        String titleEn,
+        String titleRu,
+        String bodyEn,
+        String bodyRu,
         List<Item> items
 ) implements Repliable<SendMailResponseV1> {
 
