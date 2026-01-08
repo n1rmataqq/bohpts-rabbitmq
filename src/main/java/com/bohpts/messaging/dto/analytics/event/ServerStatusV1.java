@@ -19,6 +19,7 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = true)
 public class ServerStatusV1 extends ServerEventV1 {
 
+    private long pid;
     private Boolean gmMode;
 
     @JsonCreator
@@ -27,6 +28,7 @@ public class ServerStatusV1 extends ServerEventV1 {
             @JsonProperty("eventUUID") UUID eventUUID,
             @JsonProperty("type") EventType type,
             @JsonProperty("phase") EventPhase phase,
+            @JsonProperty("pid") long pid,
             @JsonProperty("gmMode") Boolean gmMode
     ) {
         super();
@@ -35,5 +37,6 @@ public class ServerStatusV1 extends ServerEventV1 {
         this.type = type;
         this.phase = phase;
         this.gmMode = gmMode;
+        this.pid = pid;
     }
 }
